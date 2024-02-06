@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DodoApp</string>
+    <string name="text_nom">Nom :</string>
+    <string name="text_prenom">Prénom :</string>
+
+    <string name="btn_suivant">Suivant</string>
+    <string name="btn_precedent">Précédent</string>
+
+</resources>
