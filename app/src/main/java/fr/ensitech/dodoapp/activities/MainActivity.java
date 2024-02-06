@@ -10,7 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+
+import com.google.android.material.button.MaterialButton;
 
 import fr.ensitech.dodoapp.R;
 import fr.ensitech.dodoapp.tags.Tags;
@@ -27,30 +31,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextNom = findViewById(R.id.editText_nom);
-        editTextPrenom = findViewById(R.id.editText_prenom);
-        btnSuivant = findViewById(R.id.btn_suivant);
 
-        btnSuivant.setOnClickListener(new View.OnClickListener() {
+        TextView username =(TextView) findViewById(R.id.username);
+        TextView password =(TextView) findViewById(R.id.password);
+
+        MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+
+        //admin and admin
+
+        loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                if(editTextNom.getText().toString().trim().isEmpty()
-                        || editTextPrenom.getText().toString().trim().isEmpty()){
-                    Toast.makeText(MainActivity.this, "Tous les champs sont obligatoires", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                Log.i(TAG,"Nom = "+ editTextNom.getText().toString()
-                + "Prénom = " + editTextPrenom.getText().toString());
-                Intent intent = new Intent(MainActivity.this, SecondeActivity.class);
-
-                //sans passer de paramètres à la prochaine activite
-                // startActivity(intent);
-                //en récupérant des data de la prochaine activité
-               // setResult(Activity.RESULT_OK, intent);
-                startActivityForResult(intent,1);
-
+            public void onClick(View v) {
+                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
+                    //correct
+                    Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
+                }else
+                    //incorrect
+                    Toast.makeText(MainActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
 
