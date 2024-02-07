@@ -1,9 +1,9 @@
 package fr.ensitech.dodoapp.tags;
 
-import fr.ensitech.dodoapp.activities.MainActivity;
-import fr.ensitech.dodoapp.activities.SecondeActivity;
+import fr.ensitech.dodoapp.activities.AccueilActivity;
+import fr.ensitech.dodoapp.activities.LoginActivity;
 
 public class Tags {
-    public static String MAIN_ACTIVITY = MainActivity.class.getSimpleName();
-    public static String SECONDE_ACTIVITY = SecondeActivity.class.getSimpleName();
+    public static String ACCUEIL_ACTIVITY = AccueilActivity.class.getSimpleName();
+    public static String LOGIN_ACTIVITY = LoginActivity.class.getSimpleName();
 }
