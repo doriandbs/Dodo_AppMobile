@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import fr.ensitech.dodoapp.R;
+import fr.ensitech.dodoapp.services.NotifService;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view) {
         if(loginEmail.getText().toString().equals("dubois.dorian2@gmail.com") && loginPassword.getText().toString().equals("dorian")){
             Toast.makeText(LoginActivity.this, "Vous êtes bien connectés", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(LoginActivity.this, NotifService.class);
+            startService(intent);
         }
         Toast.makeText(LoginActivity.this, "Email ou mot de passe incorrect", Toast.LENGTH_LONG).show();
 
