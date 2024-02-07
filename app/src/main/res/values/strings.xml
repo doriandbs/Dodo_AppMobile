@@ -1,9 +1,20 @@
 <resources>
+    <!-- Nom appli -->
     <string name="app_name">DodoApp</string>
+
+    <!-- Informations textes -->
     <string name="text_nom">Nom :</string>
     <string name="text_prenom">Prénom :</string>
 
+
+    <!-- Boutons page main -->
     <string name="btn_suivant">Suivant</string>
+    <string name="btn_startService">Démarrer Service</string>
+    <string name="btn_stopService">Arrêter Service</string>
+
+
+    <!-- Boutons page seconde activity -->
     <string name="btn_precedent">Précédent</string>
+
 
 </resources>

@@ -1,9 +1,5 @@
 package fr.ensitech.dodoapp.activities;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,15 +8,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import fr.ensitech.dodoapp.R;
+import fr.ensitech.dodoapp.services.SonnerieService;
 import fr.ensitech.dodoapp.tags.Tags;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private static EditText editTextNom, editTextPrenom;
-    private Button btnSuivant;
+    private Button btnSuivant, btnStartService, btnStopService;
 
     private final String TAG = Tags.MAIN_ACTIVITY;
+
+    public void onClick(View view) {
+        if (view == btnStartService) {
+            startService(new Intent(this, SonnerieService.class));
+        }if (view == btnStopService) {
+            stopService(new Intent(this, SonnerieService.class));
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         editTextNom = findViewById(R.id.editText_nom);
         editTextPrenom = findViewById(R.id.editText_prenom);
         btnSuivant = findViewById(R.id.btn_suivant);
+        btnStartService = findViewById(R.id.buttonStartService);
+        btnStopService = findViewById(R.id.buttonStopService);
+
+
+
 
         btnSuivant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,5 +84,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static EditText getEditTextPrenom() {
         return editTextPrenom;
+    }
+
+    public void startService(View view){
+        Intent intent = new Intent(MainActivity.this,SonnerieService.class);
+        startService(intent);
+    }
+    public void stopService(View view){
+        Intent intent = new Intent(MainActivity.this,SonnerieService.class);
+        stopService(intent);
     }
 }
