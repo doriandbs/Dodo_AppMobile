@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">DodoApp</string>
+    <string name="text_accueil">Veuillez vous connecter avec vos identifiants.
+    Si vous n\'avez pas de compte, créez-en un pour pouvoir vous identifier</string>
+
+
     <string name="text_login_email">Email :</string>
     <string name="text_login_password">Mot de passe :</string>
     <string name="text_auth">Veuillez rentrer vos identifiants pour vous connecter</string>
