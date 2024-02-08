@@ -42,15 +42,15 @@ public class CalculatriceActivity extends AppCompatActivity {
         };
 
         findViewById(R.id.buttonZero).setOnClickListener(listener);
-        findViewById(R.id.buttonOne).setOnClickListener(listener);
-        findViewById(R.id.buttonTwo).setOnClickListener(listener);
-        findViewById(R.id.buttonThree).setOnClickListener(listener);
-        findViewById(R.id.buttonFour).setOnClickListener(listener);
-        findViewById(R.id.buttonFive).setOnClickListener(listener);
+        findViewById(R.id.buttonUn).setOnClickListener(listener);
+        findViewById(R.id.buttonDeux).setOnClickListener(listener);
+        findViewById(R.id.buttonTrois).setOnClickListener(listener);
+        findViewById(R.id.buttonQuatre).setOnClickListener(listener);
+        findViewById(R.id.buttonCinq).setOnClickListener(listener);
         findViewById(R.id.buttonSix).setOnClickListener(listener);
-        findViewById(R.id.buttonSeven).setOnClickListener(listener);
-        findViewById(R.id.buttonEight).setOnClickListener(listener);
-        findViewById(R.id.buttonNine).setOnClickListener(listener);
+        findViewById(R.id.buttonSept).setOnClickListener(listener);
+        findViewById(R.id.buttonHuit).setOnClickListener(listener);
+        findViewById(R.id.buttonNeuf).setOnClickListener(listener);
         findViewById(R.id.buttonPoint).setOnClickListener(listener);
     }
 
@@ -77,8 +77,8 @@ public class CalculatriceActivity extends AppCompatActivity {
 
         findViewById(R.id.buttonPlus).setOnClickListener(listener);
         findViewById(R.id.buttonMoins).setOnClickListener(listener);
-        findViewById(R.id.buttonMulti).setOnClickListener(listener);
-        findViewById(R.id.buttonDiv).setOnClickListener(listener);
+        findViewById(R.id.buttonMultiplier).setOnClickListener(listener);
+        findViewById(R.id.buttonDiviser).setOnClickListener(listener);
 
         findViewById(R.id.buttonClear).setOnClickListener(new View.OnClickListener() {
             @Override
