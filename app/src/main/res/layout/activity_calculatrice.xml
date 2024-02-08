@@ -31,6 +31,7 @@
                 android:id="@+id/buttonUn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"
                 android:text="@string/btn_un"
                 android:textSize="28sp" />
@@ -44,6 +45,7 @@
                 android:id="@+id/buttonDeux"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"
                 android:text="@string/btn_deux"
                 android:textSize="28sp" />
@@ -57,6 +59,7 @@
                 android:id="@+id/buttonTrois"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"
                 android:text="@string/btn_trois"
                 android:textSize="28sp" />
@@ -71,6 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#068EA5"
                 android:text="@string/btn_plus"
                 android:textSize="28sp" />
 
@@ -86,6 +90,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1" />
             <Space
                 android:layout_width="0dp"
@@ -97,6 +102,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -108,6 +114,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -119,6 +126,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#068EA5"
                 android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
@@ -131,6 +139,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1" />
             <Space
                 android:layout_width="0dp"
@@ -142,6 +151,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -153,6 +163,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -164,6 +175,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#068EA5"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -177,6 +189,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1" />
             <Space
                 android:layout_width="0dp"
@@ -188,6 +201,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -199,6 +213,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#41B692"
                 android:layout_weight="1"/>
             <Space
                 android:layout_width="0dp"
@@ -210,6 +225,7 @@
                 android:textSize="28sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#068EA5"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -217,6 +233,8 @@
             android:id="@+id/buttonEquals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F1C0AD"
+            android:textSize="28sp"
             android:text="@string/btn_egal" />
 
         <TextView
