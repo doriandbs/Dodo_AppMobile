@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CalculatriceActivity">
-    <!-- activity_calculator.xml -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,95 +19,93 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="0"
+            android:text="@string/btn_zero"
             android:textSize="32sp" />
 
-        <!-- Layout for the buttons -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="4"
             android:rowCount="5">
 
-            <!-- Define your buttons here, for example: -->
             <Button
                 android:id="@+id/buttonOne"
-                android:text="1"
+                android:text="@string/btn_un"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonTwo"
-                android:text="2"
+                android:text="@string/btn_deux"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonThree"
-                android:text="3"
+                android:text="@string/btn_trois"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonPlus"
-                android:text="+"
+                android:text="@string/btn_plus"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonFour"
-                android:text="4"
+                android:text="@string/btn_quatre"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonFive"
-                android:text="5"
+                android:text="@string/btn_cinq"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonSix"
-                android:text="6"
+                android:text="@string/btn_six"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonMoins"
-                android:text="-"
+                android:text="@string/btn_moins"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonSeven"
-                android:text="7"
+                android:text="@string/btn_sept"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonEight"
-                android:text="8"
+                android:text="@string/btn_huit"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonNine"
-                android:text="9"
+                android:text="@string/btn_neuf"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonMulti"
-                android:text="*"
+                android:text="@string/btn_multiplier"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonPoint"
-                android:text="."
+                android:text="@string/btn_point"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonZero"
-                android:text="0"
+                android:text="@string/btn_zero"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonClear"
-                android:text="C"
+                android:text="@string/btn_clear"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/buttonDiv"
-                android:text="/"
+                android:text="@string/btn_diviser"
                 android:textSize="28sp" />
         </GridLayout>
 
@@ -116,7 +113,7 @@
             android:id="@+id/buttonEquals"
             android:layout_width="352dp"
             android:layout_height="wrap_content"
-            android:text="=" />
+            android:text="@string/btn_egal" />
 
         <TextView
             android:id="@+id/textViewLastOperation"

@@ -22,5 +22,22 @@
 
     <string name="text_register_valider">Valider</string>
 
+    <string name="btn_un">1</string>
+    <string name="btn_deux">2</string>
+    <string name="btn_trois">3</string>
+    <string name="btn_plus">+</string>
+    <string name="btn_quatre">4</string>
+    <string name="btn_cinq">5</string>
+    <string name="btn_six">6</string>
+    <string name="btn_moins">-</string>
+    <string name="btn_sept">7</string>
+    <string name="btn_huit">8</string>
+    <string name="btn_neuf">9</string>
+    <string name="btn_multiplier">*</string>
+    <string name="btn_point">.</string>
+    <string name="btn_zero">0</string>
+    <string name="btn_clear">C</string>
+    <string name="btn_diviser">/</string>
+    <string name="btn_egal">=</string>
 
 </resources>

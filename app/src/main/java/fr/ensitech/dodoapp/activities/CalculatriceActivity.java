@@ -1,5 +1,6 @@
 package fr.ensitech.dodoapp.activities;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ public class CalculatriceActivity extends AppCompatActivity {
     private TextView textViewResult, textViewLastOperation;
     private String valeur1 = null;
     private String valeur2 = null;
-    private Double resultat;
+    private Float  resultat;
     private String operationCourante = "";
 
 
@@ -26,15 +27,18 @@ public class CalculatriceActivity extends AppCompatActivity {
         textViewResult = findViewById(R.id.textViewResult);
         textViewLastOperation = findViewById(R.id.textViewLastOperation);
 
-        setNumericOnClickListener();
-        setOperatorOnClickListener();
+        chiffresListener();
+        operationListener();
     }
 
-    private void setNumericOnClickListener() {
+    private void chiffresListener() {
         View.OnClickListener listener = v -> {
-            Button button = (Button) v;
-            textViewResult.append(button.getText());
-            textViewLastOperation.setText(null);
+            if(textViewResult.getText().toString().equals("0")){
+                textViewResult.setText(null);
+            }
+                Button button = (Button) v;
+                textViewResult.setText(textViewResult.getText().toString().concat(button.getText().toString()));
+                textViewLastOperation.setText(null);
         };
 
         findViewById(R.id.buttonZero).setOnClickListener(listener);
@@ -51,7 +55,7 @@ public class CalculatriceActivity extends AppCompatActivity {
     }
 
 
-    private void setOperatorOnClickListener() {
+    private void operationListener() {
         View.OnClickListener listener = v -> {
             Button button = (Button) v;
             if (valeur1 != null && !valeur1.isEmpty()) {
@@ -89,44 +93,59 @@ public class CalculatriceActivity extends AppCompatActivity {
         findViewById(R.id.buttonEquals).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double resultat = calculer();
-                textViewLastOperation.setText("Valeur 1 = " + valeur1
-                        + "\nOperateur :" + operationCourante
-                        + "\nValeur 2 = " + valeur2
-                        + "\nResultat = " + resultat);
+                Float resultat = calculer();
                 valeur1 = "";
-                operationCourante = "";
+                afficherDerniereOperation();
+
             }
         });
     }
 
 
-    private Double calculer() {
+    private Float calculer() {
         if(valeur1 != null && !valeur1.isEmpty()) {
             try {
                 valeur2 = textViewResult.getText().toString(); 
                 switch(operationCourante) {
                     case "+":
-                        resultat = Double.parseDouble(valeur1) + Double.parseDouble(valeur2);
+                        resultat = Float.parseFloat(valeur1) + Float.parseFloat(valeur2);
                         break;
                     case "-":
-                        resultat =Double.parseDouble(valeur1) - Double.parseDouble(valeur2);
+                        resultat =Float.parseFloat(valeur1) - Float.parseFloat(valeur2);
                         break;
                     case "*":
-                        resultat = Double.parseDouble(valeur1) * Double.parseDouble(valeur2);
+                        resultat = Float.parseFloat(valeur1) * Float.parseFloat(valeur2);
                         break;
                     case "/":
-                        resultat = Double.parseDouble(valeur1) / Double.parseDouble(valeur2);
+                        resultat = Float.parseFloat(valeur1) / Float.parseFloat(valeur2);
                         break;
                 }
                 textViewResult.setText(resultat.toString());
                 textViewLastOperation.setText(null);
+                sauvegarderDerniereOperation("Valeur 1 = " + valeur1
+                        + "\nOperateur :" + operationCourante
+                        + "\nValeur 2 = " + valeur2
+                        + "\nResultat = " + resultat);
             } catch (Exception e) {
                 textViewResult.setText("Erreur");
             }
         }
         return resultat;
 
+    }
+
+
+    private void sauvegarderDerniereOperation(String operation) {
+        SharedPreferences prefs = getSharedPreferences("calculatrice", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("derniereOperation", operation);
+        editor.apply();
+    }
+
+    private void afficherDerniereOperation() {
+        SharedPreferences prefs = getSharedPreferences("calculatrice", MODE_PRIVATE);
+        String derniereOperation = prefs.getString("derniereOperation", "");
+        textViewLastOperation.setText(derniereOperation);
     }
 
 }
